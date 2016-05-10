@@ -10,35 +10,41 @@ void setup() {
 
 void loop() {
   // Start Red color
-  powerMyLed(1,0,0);
+  digitalRGB(1,0,0);
   delay(1000);
 
   //Start Green color
-  powerMyLed(0,1,0);
+  digitalRGB(0,1,0);
   delay(1000);
 
   // Start Blue color
-  powerMyLed(0,0,1);
+  digitalRGB(0,0,1);
   delay(1000);
 
   // Start Purple color
-  powerMyLed(1,0,1);
+  digitalRGB(1,0,1);
   delay(1000);
 
   // Start Yellow color
-  powerMyLed(1,1,0);
+  digitalRGB(1,1,0);
   delay(1000);
 
   // Start Light Blue color
-  powerMyLed(0,1,1);
+  digitalRGB(0,1,1);
   delay(1000);
 
   // Start White color
-  powerMyLed(1,1,1);
+  digitalRGB(1,1,1);
   delay(1000);
+
+  digitalRGB(0,0,0);
+  for (int i=0; i<=255; i++) {
+    analogRGB(i,0,0);
+    delay(10);
+  }
 }
 
-void powerMyLed(int Red, int Green, int Blue) {
+void digitalRGB(int Red, int Green, int Blue) {
  if (Red==1) {
   digitalWrite(pinRed,HIGH);
  } else { 
@@ -56,4 +62,10 @@ void powerMyLed(int Red, int Green, int Blue) {
  } else { 
   digitalWrite(pinBlue, LOW);
  }
+}
+
+void analogRGB(int Red, int Green, int Blue) {
+ analogWrite(pinRed, Red);
+ analogWrite(pinGreen, Green);
+ analogWrite(pinBlue, Blue);
 }
