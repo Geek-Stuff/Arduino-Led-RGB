@@ -37,9 +37,15 @@ void loop() {
   digitalRGB(1,1,1);
   delay(1000);
 
-  digitalRGB(0,0,0);
+  // Start analog Red
   for (int i=0; i<=255; i++) {
     analogRGB(i,0,0);
+    delay(10);
+  }
+
+  // Start analog Red to Blue
+  for (int i=0; i<=255; i++) {
+    analogRGB(255-i,0,i);
     delay(10);
   }
 }
