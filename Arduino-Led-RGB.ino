@@ -48,6 +48,18 @@ void loop() {
     analogRGB(255-i,0,i);
     delay(10);
   }
+
+  // Start analog Blue to Green
+  for (int i=0; i<=255; i++) {
+    analogRGB(0,i,255-i);
+    delay(10);
+  }
+
+  // Start analog Green to Red
+  for (int i=0; i<=255; i++) {
+    analogRGB(i,255-i,0);
+    delay(10);
+  }
 }
 
 void digitalRGB(int Red, int Green, int Blue) {
