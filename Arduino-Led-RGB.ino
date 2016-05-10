@@ -20,6 +20,22 @@ void loop() {
   // Start Blue color
   powerMyLed(0,0,1);
   delay(1000);
+
+  // Start Purple color
+  powerMyLed(1,0,1);
+  delay(1000);
+
+  // Start Yellow color
+  powerMyLed(1,1,0);
+  delay(1000);
+
+  // Start Light Blue color
+  powerMyLed(0,1,1);
+  delay(1000);
+
+  // Start White color
+  powerMyLed(1,1,1);
+  delay(1000);
 }
 
 void powerMyLed(int Red, int Green, int Blue) {
